@@ -1,0 +1,265 @@
+/* Reset CSS */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+    font-family: arcade;
+    src: url(fonts/PressStart2P-Regular.ttf);
+}
+
+/* Global Styles */
+
+body {
+	font-family: 'arcade', cursive;
+	color: #333;
+	background-image: url('images/C708DFAC-659D-46CD-929D-BC659D36EB46_1_201_a.jpeg'); /* Replace with the path to your image */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: url('icons/icons8-3d-pointer-48.png'), auto;
+}
+
+
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+
+/* Hero Styles */
+.hero {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+}
+
+	
+	
+	
+
+
+.hero h1 {
+	font-size: 80px;
+	color: #fff;
+	text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 30px;
+}
+
+
+.lets-play {
+    /* Positioning */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Button Styles */
+    background-color: #f6202b;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'arcade';
+    padding: 20px 50px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Add more box-shadow */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.4;
+
+    /* Hover Styles */
+}
+
+.lets-play:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Press animation */
+.lets-play:active {
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Watch Tutorial Styles */
+.watch-tutorial {
+
+padding: 80px 20px;
+}
+
+.watch-tutorial h2 {
+font-size: 50px;
+font-weight: bold;
+margin-bottom: 30px;
+text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    display: flex;  /* Flexbox */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  /* Fill the container */
+    height: 100%;  /* Fill the container */
+}
+
+
+@media screen and (max-width: 768px) {
+.hero h1 {
+font-size: 50px;
+}
+.lets-play {
+font-size: 40px;
+padding: 15px 30px;
+border-radius: 20px;
+}
+.watch-tutorial h2 {
+font-size: 40px;
+}
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family:'arcade';
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+	font-family: 'arcade';
+}
+
+nav .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+	font-family:'arcade';
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 30px;
+	font-family: 'arcade';
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px; /* Change the padding values to adjust the size of the nav links */
+    transition: all 0.3s ease-in-out; /* Add a transition for the hover effect */
+}
+
+nav ul li a:hover {
+    color: #b90000;
+    text-shadow: 0 0 5px #610303;
+    transform: scale(1.1);
+}
+
+.walking-man {
+    position: absolute;
+    bottom: 140px;  /* Adjust to move up/down */
+    left: 0;  /* Adjust to move left/right */
+    width: 100px; 
+    height: auto;
+    z-index: 50;
+    animation: walking-man 20s linear infinite;
+}
+
+@keyframes walking-man {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+.butterfly {
+    position: absolute;
+    width: 100px; /* Adjust the width to match the size of your GIF */
+    height: auto;
+    z-index: 50;
+    animation: butterfly 70s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+@keyframes butterfly {
+    0% {
+        top: 0%;
+        left: 0%;
+    }
+    25% {
+        top: 50%;
+        left: 50%;
+    }
+    50% {
+        top: 100%;
+        left: 0%;
+    }
+    75% {
+        top: 50%;
+        left: 100%;
+    }
+    100% {
+        top: 0%;
+        left: 0%;
+    }
+}
+
+nav ul li a:focus {
+    color: #b90000;
+    text-shadow: 0 0 5px #610303;
+    transform: scale(1.1);
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .hero h1 {
+      animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  

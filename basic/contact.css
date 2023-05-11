@@ -1,0 +1,121 @@
+@font-face {
+    font-family: arcade;
+    src: url(fonts/PressStart2P-Regular.ttf);
+}
+
+
+
+html {
+    height: 100%;
+}
+
+body {
+   
+    font-family: 'arcade', cursive;
+	color: #333;
+	background-image: url('images/gym.png'); /* Replace with the path to your image */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: url('icons/icons8-3d-pointer-48.png'), auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);  /* Adjust this value as needed */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+	font-family: 'arcade';
+}
+
+nav .logo a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+	font-family:'arcade';
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 30px;
+	font-family: 'arcade';
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px; /* Change the padding values to adjust the size of the nav links */
+    transition: all 0.3s ease-in-out; /* Add a transition for the hover effect */
+}
+
+nav ul li a:hover {
+    color: #b90000;
+    text-shadow: 0 0 5px #610303;
+    transform: scale(1.1);
+}
+
+.contact-container {
+    background-color: rgba(128, 127, 133, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container input, .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 0px 15px 4px rgba
+    (0, 0, 0, 0.06);
+    border-radius: 5px;
+}
+
+.contact-container button {
+    background-color: #000000; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+.contact-container button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #ba0000;
+}
+

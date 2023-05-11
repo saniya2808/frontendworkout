@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="ds.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Workout Tracker</a>
+                <button id="play-music">Play Music</button>
+                <audio id="bg-music" loop>
+                    <source src="music/Memo  cute, 8 bit, chiptune.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <audio id="hover-sound">
+                    <source src="music/mixkit-arcade-game-jump-coin-216.wav" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <ul>
+                <li><a href="#use" class="scroll-link">How to Use</a></li>
+		        <li><a href="#about" class="scroll-link">About Us</a></li>
+		        <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <div class="image-container">
+        <img src="gif/pixel-speech-bubble.gif" alt="Text GIF" class="text-gif">
+ </div>
+
+    <div class="exercise-container">
+        <div class="exercise-navigation">
+            <img src="images/leftarrow.png" alt="Previous Exercise" class="nav-arrow prev-arrow">
+            <div class="exercise-wrapper">
+                <div class="exercise" data-index="0" data-title="Arm Curl"> 
+                   
+
+                    <a href="exercise.html?exercise=arm-curl"><img src="images/armcurll.webp" alt="Exercise 1"></a>
+                </div>
+                <div class="exercise" data-index="1" data-title="Cat">
+                    <a href="exercise.html?exercise=cat"><img src="images/zoewoo_cute_chibi_exercising_cat_smiling_one_green_and_one_blue_04396ca6-45be-4340-8de1-dfdd8acd0c32.png" alt="Exercise 2"></a>
+                </div>
+                <!-- Add more exercises here -->
+                
+            
+            </div>
+            <img src="images/rightarrow.png" alt="Next Exercise" class="nav-arrow next-arrow">
+        </div>
+    </div>
+
+    <div class="exercise-title">
+        <h3>Exercise Title</h3>
+    </div>
+
+    <script src="ds.js"></script>
+</body>
+</html>

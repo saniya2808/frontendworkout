@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Permission</title>
+</head>
+<body>
+    <section class="permission-section">
+        <h1>Allow Background Music?</h1>
+        <button id="allow-music">Allow Music</button>
+        <button id="deny-music">Deny Music</button>
+    </section>
+
+    <script>
+        const allowMusicButton = document.getElementById("allow-music");
+        const denyMusicButton = document.getElementById("deny-music");
+
+        allowMusicButton.addEventListener("click", () => {
+            localStorage.setItem("playMusic", "true");
+            window.location.href = "index.html";
+        });
+
+        denyMusicButton.addEventListener("click", () => {
+            localStorage.setItem("playMusic", "false");
+            window.location.href = "index.html";
+        });
+    </script>
+</body>
+</html>
